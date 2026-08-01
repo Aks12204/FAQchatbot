@@ -1,6 +1,0 @@
-flask
-openai
-pandas
-scikit-learn
-python-dotenv
-flask-cors
