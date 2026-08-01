@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-brand">
+                <div class="bot-avatar">🤖</div>
+                <div class="header-info">
+                    <h1>FAQ Assistant</h1>
+                    <span class="status-indicator"><span class="dot"></span> Online</span>
+                </div>
+            </div>
+            <button id="clearBtn" class="btn-secondary" title="Clear Chat">Clear</button>
+        </header>
+
+        <!-- Suggested Chips -->
+        <div class="suggestions-wrapper">
+            <span class="chip-label">Quick Suggestions:</span>
+            <div id="suggestions" class="suggestions-chips">
+                <!-- Dynamically loaded -->
+            </div>
+        </div>
+
+        <!-- Chat Messages -->
+        <main id="chatThread" class="chat-thread">
+            <div class="message system-message">
+                <div class="message-bubble">
+                    👋 Hello! Welcome to Support FAQ Assistant. How can I help you today?
+                </div>
+            </div>
+        </main>
+
+        <!-- Input Bar -->
+        <footer class="app-footer">
+            <form id="chatForm" class="chat-form">
+                <input 
+                    type="text" 
+                    id="userInput" 
+                    placeholder="Type your question here..." 
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit" id="sendBtn" class="btn-primary">
+                    Send
+                </button>
+            </form>
+            <div class="input-hint">Press Enter ↵ to send message</div>
+        </footer>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>
